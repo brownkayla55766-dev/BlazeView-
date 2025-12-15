@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>BlazeView</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="login-page">
+  <div class="login-box">
+    <h1>BlazeView</h1>
+    <p>Valdosta State University</p>
+
+    <input type="text" placeholder="Username">
+    <input type="password" placeholder="Password">
+
+    <button onclick="login()">Sign In</button>
+    <span class="help">Need help signing in?</span>
+  </div>
+</div>
+
+<div id="dashboard">
+  <header>
+    <h1>BlazeView</h1>
+    <span class="user">Student</span>
+  </header>
+
+  <nav>
+    <a class="active">Dashboard</a>
+    <a>Grades</a>
+    <a>Schedule</a>
+    <a>Financial Aid</a>
+    <a onclick="logout()">Logout</a>
+  </nav>
+
+  <main>
+    <div class="stats">
+      <div class="card">
+        <h3>Current GPA</h3>
+        <p class="gpa">3.33</p>
+      </div>
+      <div class="card">
+        <h3>Term</h3>
+        <p>Fall 2025</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Final Grades</h2>
+      <table>
+        <tr>
+          <th>Course</th>
+          <th>Grade</th>
+          <th>Letter</th>
+        </tr>
+        <tr><td>Elementary Statistics</td><td>86.76</td><td>B</td></tr>
+        <tr><td>Intro to Sociology (Section B)</td><td>90.89</td><td>A</td></tr>
+        <tr><td>Organismal Biology Lab</td><td>87.93</td><td>B</td></tr>
+        <tr><td>Organismal Biology XLS</td><td>91.22</td><td>A</td></tr>
+        <tr><td>United States History to 1865</td><td>86.73</td><td>B</td></tr>
+        <tr><td>Women in the Visual Arts</td><td>83.42</td><td>B</td></tr>
+      </table>
+    </div>
+  </main>
+</div>
+
+<script>
+  function login() {
+    document.getElementById("login-page").style.display = "none";
+    document.getElementById("dashboard").style.display = "block";
+  }
+
+  function logout() {
+    document.getElementById("dashboard").style.display = "none";
+    document.getElementById("login-page").style.display = "flex";
+  }
+</script>
+
+</body>
+</html>
